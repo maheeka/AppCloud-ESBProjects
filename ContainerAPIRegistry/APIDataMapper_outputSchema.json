@@ -1,0 +1,32 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "root",
+  "type" : "object",
+  "properties" : {
+    "endpoint" : {
+      "id" : "http://wso2jsonschema.org/endpoint",
+      "type" : "object",
+      "properties" : {
+        "apis" : {
+          "id" : "http://wso2jsonschema.org/endpoint/apis",
+          "type" : "array",
+          "items" : [ {
+            "id" : "http://wso2jsonschema.org/endpoint/apis/0",
+            "type" : "object",
+            "properties" : {
+              "name" : {
+                "id" : "http://wso2jsonschema.org/endpoint/apis/0/name",
+                "type" : "string"
+              },
+              "context" : {
+                "id" : "http://wso2jsonschema.org/endpoint/apis/0/context",
+                "type" : "string"
+              }
+            }
+          } ]
+        }
+      }
+    }
+  }
+}

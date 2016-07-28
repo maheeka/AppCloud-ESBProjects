@@ -1,0 +1,22 @@
+map_S_Envelope_S_root = function(){ 
+var outputroot={};
+
+var count_i_ns_return_xsi_type_ax2476_APIData = 0;
+outputroot =  {};
+outputroot.endpoint =  {};
+outputroot.endpoint.apis =  [];
+
+for(i_ns_return_xsi_type_ax2476_APIData in inputsoapenv_Envelope.soapenv_Body.ns_getAPIsForListingResponse.ns_return_xsi_type_ax2476_APIData){
+outputroot.endpoint.apis[count_i_ns_return_xsi_type_ax2476_APIData] =  {};
+outputroot.endpoint.apis[count_i_ns_return_xsi_type_ax2476_APIData].name = inputsoapenv_Envelope.soapenv_Body.ns_getAPIsForListingResponse.ns_return_xsi_type_ax2476_APIData[i_ns_return_xsi_type_ax2476_APIData].ax2476_name;
+outputroot.endpoint.apis[count_i_ns_return_xsi_type_ax2476_APIData].context = inputsoapenv_Envelope.soapenv_Body.ns_getAPIsForListingResponse.ns_return_xsi_type_ax2476_APIData[i_ns_return_xsi_type_ax2476_APIData].ax2476_context;
+
+count_i_ns_return_xsi_type_ax2476_APIData++;
+}
+return outputroot;
+};
+
+
+
+
+

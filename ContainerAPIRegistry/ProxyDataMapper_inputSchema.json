@@ -1,0 +1,262 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "soapenv:Envelope",
+  "type" : "object",
+  "properties" : {
+    "soapenv:Body" : {
+      "id" : "http://wso2jsonschema.org/soapenv:Body",
+      "type" : "object",
+      "properties" : {
+        "ns:listServicesResponse" : {
+          "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse",
+          "type" : "object",
+          "properties" : {
+            "ns:return,xsi:type=ax2504:ServiceMetaDataWrapper" : {
+              "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper",
+              "type" : "object",
+              "properties" : {
+                "ax2504:numberOfActiveServices" : {
+                  "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:numberOfActiveServices",
+                  "type" : "number"
+                },
+                "ax2504:numberOfCorrectServiceGroups" : {
+                  "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:numberOfCorrectServiceGroups",
+                  "type" : "number"
+                },
+                "ax2504:numberOfFaultyServiceGroups" : {
+                  "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:numberOfFaultyServiceGroups",
+                  "type" : "number"
+                },
+                "ax2504:numberOfPages" : {
+                  "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:numberOfPages",
+                  "type" : "number"
+                },
+                "ax2504:serviceTypes" : {
+                  "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:serviceTypes",
+                  "type" : "array",
+                  "items" : [ {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:serviceTypes/0",
+                    "type" : "string"
+                  } ]
+                },
+                "ax2504:services,xsi:type=ax2504:ServiceMetaData" : {
+                  "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData",
+                  "type" : "object",
+                  "properties" : {
+                    "ax2504:CAppArtifact" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:CAppArtifact",
+                      "type" : "boolean"
+                    },
+                    "ax2504:active" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:active",
+                      "type" : "boolean"
+                    },
+                    "ax2504:description" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:description",
+                      "type" : "object",
+                      "nullable" : "true",
+                      "properties" : { },
+                      "attributes" : {
+                        "xsi:nil" : {
+                          "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/xsi:nil",
+                          "type" : "boolean"
+                        }
+                      }
+                    },
+                    "ax2504:disableDeletion" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:disableDeletion",
+                      "type" : "boolean"
+                    },
+                    "ax2504:disableTryit" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:disableTryit",
+                      "type" : "boolean"
+                    },
+                    "ax2504:eprs" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:eprs",
+                      "type" : "object",
+                      "nullable" : "true",
+                      "properties" : { },
+                      "attributes" : {
+                        "xsi:nil" : {
+                          "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/xsi:nil",
+                          "type" : "boolean"
+                        }
+                      }
+                    },
+                    "ax2504:foundWebResources" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:foundWebResources",
+                      "type" : "boolean"
+                    },
+                    "ax2504:mtomStatus" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:mtomStatus",
+                      "type" : "object",
+                      "nullable" : "true",
+                      "properties" : { },
+                      "attributes" : {
+                        "xsi:nil" : {
+                          "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/xsi:nil",
+                          "type" : "boolean"
+                        }
+                      }
+                    },
+                    "ax2504:name" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:name",
+                      "type" : "string"
+                    },
+                    "ax2504:operations" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:operations",
+                      "type" : "object",
+                      "nullable" : "true",
+                      "properties" : { },
+                      "attributes" : {
+                        "xsi:nil" : {
+                          "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/xsi:nil",
+                          "type" : "boolean"
+                        }
+                      }
+                    },
+                    "ax2504:scope" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:scope",
+                      "type" : "object",
+                      "nullable" : "true",
+                      "properties" : { },
+                      "attributes" : {
+                        "xsi:nil" : {
+                          "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/xsi:nil",
+                          "type" : "boolean"
+                        }
+                      }
+                    },
+                    "ax2504:securityScenarioId" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:securityScenarioId",
+                      "type" : "object",
+                      "nullable" : "true",
+                      "properties" : { },
+                      "attributes" : {
+                        "xsi:nil" : {
+                          "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/xsi:nil",
+                          "type" : "boolean"
+                        }
+                      }
+                    },
+                    "ax2504:serviceDeployedTime" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:serviceDeployedTime",
+                      "type" : "string"
+                    },
+                    "ax2504:serviceGroupName" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:serviceGroupName",
+                      "type" : "string"
+                    },
+                    "ax2504:serviceId" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:serviceId",
+                      "type" : "object",
+                      "nullable" : "true",
+                      "properties" : { },
+                      "attributes" : {
+                        "xsi:nil" : {
+                          "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/xsi:nil",
+                          "type" : "boolean"
+                        }
+                      }
+                    },
+                    "ax2504:serviceType" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:serviceType",
+                      "type" : "string"
+                    },
+                    "ax2504:serviceUpTime" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:serviceUpTime",
+                      "type" : "string"
+                    },
+                    "ax2504:serviceVersion" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:serviceVersion",
+                      "type" : "object",
+                      "nullable" : "true",
+                      "properties" : { },
+                      "attributes" : {
+                        "xsi:nil" : {
+                          "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/xsi:nil",
+                          "type" : "boolean"
+                        }
+                      }
+                    },
+                    "ax2504:tryitURL" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:tryitURL",
+                      "type" : "string"
+                    },
+                    "ax2504:wsdlPortTypes" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:wsdlPortTypes",
+                      "type" : "object",
+                      "nullable" : "true",
+                      "properties" : { },
+                      "attributes" : {
+                        "xsi:nil" : {
+                          "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/xsi:nil",
+                          "type" : "boolean"
+                        }
+                      }
+                    },
+                    "ax2504:wsdlPorts" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:wsdlPorts",
+                      "type" : "object",
+                      "nullable" : "true",
+                      "properties" : { },
+                      "attributes" : {
+                        "xsi:nil" : {
+                          "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/xsi:nil",
+                          "type" : "boolean"
+                        }
+                      }
+                    },
+                    "ax2504:wsdlURLs" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:wsdlURLs",
+                      "type" : "array",
+                      "items" : [ {
+                        "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/ax2504:wsdlURLs/0",
+                        "type" : "string"
+                      } ]
+                    }
+                  },
+                  "attributes" : {
+                    "xsi:type" : {
+                      "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/ax2504:services,xsi:type=ax2504:ServiceMetaData/xsi:type",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "attributes" : {
+                "xsi:type" : {
+                  "id" : "http://wso2jsonschema.org/soapenv:Body/ns:listServicesResponse/ns:return,xsi:type=ax2504:ServiceMetaDataWrapper/xsi:type",
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "namespaces" : [ {
+    "prefix" : "soapenv",
+    "url" : "http://schemas.xmlsoap.org/soap/envelope/"
+  }, {
+    "prefix" : "ns",
+    "url" : "http://org.apache.axis2/xsd"
+  }, {
+    "prefix" : "xsi",
+    "url" : "http://www.w3.org/2001/XMLSchema-instance"
+  }, {
+    "prefix" : "ax2504",
+    "url" : "http://mgt.service.carbon.wso2.org/xsd"
+  }, {
+    "prefix" : "ax2510",
+    "url" : "http://utils.carbon.wso2.org/xsd"
+  }, {
+    "prefix" : "ax2506",
+    "url" : "http://neethi.apache.org/xsd"
+  }, {
+    "prefix" : "ax2507",
+    "url" : "http://util.java/xsd"
+  } ]
+}

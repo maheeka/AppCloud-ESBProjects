@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
+  <input>
+    <treeNode name="soapenv:Envelope" schemaDataType="OBJECT" level="1">
+      <node name="soapenv:Body" schemaDataType="OBJECT" level="2">
+        <node name="ns:getAPIsForListingResponse" schemaDataType="OBJECT" level="3">
+          <node name="ns:return,xsi:type=ax2476:APIData" level="4">
+            <node name="@xsi:type" schemaDataType="STRING" level="5">
+              <properties key="namespaces" value="{prefix=xsi, url=http://www.w3.org/2001/XMLSchema-instance}"/>
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:type"/>
+              <properties key="nullable" value="false"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <node name="ax2476:artifactContainerName" schemaDataType="OBJECT" level="5">
+              <node name="@xsi:nil" schemaDataType="BOOLEAN" level="6">
+                <properties key="namespaces" value="{prefix=xsi, url=http://www.w3.org/2001/XMLSchema-instance}"/>
+                <properties key="type" value="boolean"/>
+                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil"/>
+                <properties key="nullable" value="false"/>
+                <outNode/>
+                <inNode/>
+              </node>
+              <properties key="namespaces" value="{prefix=ax2476, url=http://api.rest.carbon.wso2.org/xsd}"/>
+              <properties key="type" value="object"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:artifactContainerName"/>
+              <properties key="nullable" value="true"/>
+              <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil]}"/>
+              <properties key="attribute_type" value="{attribute_type=[boolean]}"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <node name="ax2476:context" schemaDataType="STRING" level="5">
+              <properties key="namespaces" value="{prefix=ax2476, url=http://api.rest.carbon.wso2.org/xsd}"/>
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:context"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink/>
+                <outgoingLink inNode="//@output/@treeNode.0/@node.0/@node.0/@node.1/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <node name="ax2476:fileName" schemaDataType="OBJECT" level="5">
+              <node name="@xsi:nil" schemaDataType="BOOLEAN" level="6">
+                <properties key="namespaces" value="{prefix=xsi, url=http://www.w3.org/2001/XMLSchema-instance}"/>
+                <properties key="type" value="boolean"/>
+                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil"/>
+                <properties key="nullable" value="false"/>
+                <outNode/>
+                <inNode/>
+              </node>
+              <properties key="namespaces" value="{prefix=ax2476, url=http://api.rest.carbon.wso2.org/xsd}"/>
+              <properties key="type" value="object"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:fileName"/>
+              <properties key="nullable" value="true"/>
+              <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil]}"/>
+              <properties key="attribute_type" value="{attribute_type=[boolean]}"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <node name="ax2476:host" schemaDataType="OBJECT" level="5">
+              <node name="@xsi:nil" schemaDataType="BOOLEAN" level="6">
+                <properties key="namespaces" value="{prefix=xsi, url=http://www.w3.org/2001/XMLSchema-instance}"/>
+                <properties key="type" value="boolean"/>
+                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil"/>
+                <properties key="nullable" value="false"/>
+                <outNode/>
+                <inNode/>
+              </node>
+              <properties key="namespaces" value="{prefix=ax2476, url=http://api.rest.carbon.wso2.org/xsd}"/>
+              <properties key="type" value="object"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:host"/>
+              <properties key="nullable" value="true"/>
+              <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil]}"/>
+              <properties key="attribute_type" value="{attribute_type=[boolean]}"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <node name="ax2476:isEdited" schemaDataType="BOOLEAN" level="5">
+              <properties key="namespaces" value="{prefix=ax2476, url=http://api.rest.carbon.wso2.org/xsd}"/>
+              <properties key="type" value="boolean"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:isEdited"/>
+              <properties key="nullable" value="false"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <node name="ax2476:name" schemaDataType="STRING" level="5">
+              <properties key="namespaces" value="{prefix=ax2476, url=http://api.rest.carbon.wso2.org/xsd}"/>
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:name"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink/>
+                <outgoingLink inNode="//@output/@treeNode.0/@node.0/@node.0/@node.0/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <node name="ax2476:port" schemaDataType="NUMBER" level="5">
+              <properties key="namespaces" value="{prefix=ax2476, url=http://api.rest.carbon.wso2.org/xsd}"/>
+              <properties key="type" value="number"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:port"/>
+              <properties key="nullable" value="false"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <node name="ax2476:resources" schemaDataType="OBJECT" level="5">
+              <node name="@xsi:nil" schemaDataType="BOOLEAN" level="6">
+                <properties key="namespaces" value="{prefix=xsi, url=http://www.w3.org/2001/XMLSchema-instance}"/>
+                <properties key="type" value="boolean"/>
+                <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil"/>
+                <properties key="nullable" value="false"/>
+                <outNode/>
+                <inNode/>
+              </node>
+              <properties key="namespaces" value="{prefix=ax2476, url=http://api.rest.carbon.wso2.org/xsd}"/>
+              <properties key="type" value="object"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:resources"/>
+              <properties key="nullable" value="true"/>
+              <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil]}"/>
+              <properties key="attribute_type" value="{attribute_type=[boolean]}"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <node name="ax2476:statisticsEnable" schemaDataType="BOOLEAN" level="5">
+              <properties key="namespaces" value="{prefix=ax2476, url=http://api.rest.carbon.wso2.org/xsd}"/>
+              <properties key="type" value="boolean"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:statisticsEnable"/>
+              <properties key="nullable" value="false"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <node name="ax2476:tracingEnable" schemaDataType="BOOLEAN" level="5">
+              <properties key="namespaces" value="{prefix=ax2476, url=http://api.rest.carbon.wso2.org/xsd}"/>
+              <properties key="type" value="boolean"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:tracingEnable"/>
+              <properties key="nullable" value="false"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <properties key="namespaces" value="{prefix=ns, url=http://org.apache.axis2/xsd}"/>
+            <properties key="type" value="array"/>
+            <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData"/>
+            <properties key="items_id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0"/>
+            <properties key="items_type" value="object"/>
+            <properties key="nullable" value="false"/>
+            <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:type]}"/>
+            <properties key="attribute_type" value="{attribute_type=[string]}"/>
+            <properties key="properties_id" value="{ax2476:artifactContainerName={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:artifactContainerName, type=object, attributes={xsi:nil={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil, type=boolean}}}, ax2476:context={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:context, type=string}, ax2476:fileName={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:fileName, type=object, attributes={xsi:nil={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil, type=boolean}}}, ax2476:host={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:host, type=object, attributes={xsi:nil={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil, type=boolean}}}, ax2476:isEdited={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:isEdited, type=boolean}, ax2476:name={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:name, type=string}, ax2476:port={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:port, type=number}, ax2476:resources={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:resources, type=object, attributes={xsi:nil={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil, type=boolean}}}, ax2476:statisticsEnable={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:statisticsEnable, type=boolean}, ax2476:tracingEnable={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:tracingEnable, type=boolean}}"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ns, url=http://org.apache.axis2/xsd}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse"/>
+          <properties key="nullable" value="false"/>
+          <properties key="properties_id" value="{ns:return,xsi:type=ax2476:APIData={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData, type=array, items=[{id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0, type=object, properties={ax2476:artifactContainerName={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:artifactContainerName, type=object, attributes={xsi:nil={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil, type=boolean}}}, ax2476:context={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:context, type=string}, ax2476:fileName={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:fileName, type=object, attributes={xsi:nil={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil, type=boolean}}}, ax2476:host={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:host, type=object, attributes={xsi:nil={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil, type=boolean}}}, ax2476:isEdited={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:isEdited, type=boolean}, ax2476:name={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:name, type=string}, ax2476:port={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:port, type=number}, ax2476:resources={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:resources, type=object, attributes={xsi:nil={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil, type=boolean}}}, ax2476:statisticsEnable={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:statisticsEnable, type=boolean}, ax2476:tracingEnable={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:tracingEnable, type=boolean}}, attributes={xsi:type={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:type, type=string}}}]}}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <properties key="namespaces" value="{prefix=soapenv, url=http://schemas.xmlsoap.org/soap/envelope/}"/>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/soapenv:Body"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{ns:getAPIsForListingResponse={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse, type=object, properties={ns:return,xsi:type=ax2476:APIData={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData, type=array, items=[{id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0, type=object, properties={ax2476:artifactContainerName={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:artifactContainerName, type=object, attributes={xsi:nil={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil, type=boolean}}}, ax2476:context={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:context, type=string}, ax2476:fileName={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:fileName, type=object, attributes={xsi:nil={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil, type=boolean}}}, ax2476:host={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:host, type=object, attributes={xsi:nil={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil, type=boolean}}}, ax2476:isEdited={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:isEdited, type=boolean}, ax2476:name={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:name, type=string}, ax2476:port={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:port, type=number}, ax2476:resources={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:resources, type=object, attributes={xsi:nil={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil, type=boolean}}}, ax2476:statisticsEnable={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:statisticsEnable, type=boolean}, ax2476:tracingEnable={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:tracingEnable, type=boolean}}, attributes={xsi:type={id=http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:type, type=string}}}]}}}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="namespaces" value="{prefix=soapenv, url=http://schemas.xmlsoap.org/soap/envelope/},{prefix=ax2476, url=http://api.rest.carbon.wso2.org/xsd},{prefix=ns, url=http://org.apache.axis2/xsd},{prefix=xsi, url=http://www.w3.org/2001/XMLSchema-instance}"/>
+      <properties key="namespaces" value="{prefix=soapenv, url=http://schemas.xmlsoap.org/soap/envelope/}"/>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </input>
+  <output>
+    <treeNode name="root" schemaDataType="OBJECT" level="1">
+      <node name="endpoint" schemaDataType="OBJECT" level="2">
+        <node name="apis" level="3">
+          <node name="name" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/endpoint/apis/0/name"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.6/@outNode/@outgoingLink.1"/>
+          </node>
+          <node name="context" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/endpoint/apis/0/context"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.2/@outNode/@outgoingLink.1"/>
+          </node>
+          <properties key="type" value="array"/>
+          <properties key="id" value="http://wso2jsonschema.org/endpoint/apis"/>
+          <properties key="items_id" value="http://wso2jsonschema.org/endpoint/apis/0"/>
+          <properties key="items_type" value="object"/>
+          <properties key="nullable" value="false"/>
+          <properties key="properties_id" value="{name={id=http://wso2jsonschema.org/endpoint/apis/0/name, type=string}, context={id=http://wso2jsonschema.org/endpoint/apis/0/context, type=string}}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/endpoint"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{apis={id=http://wso2jsonschema.org/endpoint/apis, type=array, items=[{id=http://wso2jsonschema.org/endpoint/apis/0, type=object, properties={name={id=http://wso2jsonschema.org/endpoint/apis/0/name, type=string}, context={id=http://wso2jsonschema.org/endpoint/apis/0/context, type=string}}}]}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </output>
+</datamapper:DataMapperRoot>

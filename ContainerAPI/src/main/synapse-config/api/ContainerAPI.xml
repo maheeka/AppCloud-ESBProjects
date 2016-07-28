@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/container/endpoints" name="ContainerAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <property name="ROOT" scope="default">
+                <urls/>
+            </property>
+            <payloadFactory media-type="xml">
+                <format>
+                    <soapenv:Envelope xmlns:aut="http://authentication.services.core.carbon.wso2.org" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+                        <soapenv:Header/>
+                        <soapenv:Body>
+                            <aut:login>
+                                <aut:username>admin</aut:username>
+                                <aut:password>admin</aut:password>
+                                <aut:remoteAddress>localhost</aut:remoteAddress>
+                            </aut:login>
+                        </soapenv:Body>
+                    </soapenv:Envelope>
+                </format>
+                <args/>
+            </payloadFactory>
+            <header name="Action" scope="default" value="urn:login"/>
+            <property name="messageType" scope="axis2" type="STRING" value="text/xml"/>
+            <call>
+                <endpoint>
+                    <address format="soap11" uri="https://localhost:9453/services/AuthenticationAdmin"/>
+                </endpoint>
+            </call>
+            <property expression="fn:tokenize(syn:get-property('transport','Set-Cookie'),';')[1]" name="ESBSessionID" scope="default" type="STRING" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+            <log>
+                <property expression="$ctx:ESBSessionID" name="ESBSessionID"/>
+            </log>
+            <clone>
+                <target>
+                    <sequence>
+                        <payloadFactory media-type="xml">
+                            <format>
+                                <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+                                    <soapenv:Header/>
+                                    <soapenv:Body>
+                                        <xsd:listServices>
+                                            <xsd:serviceTypeFilter>proxy</xsd:serviceTypeFilter>
+                                            <xsd:serviceSearchString>*</xsd:serviceSearchString>
+                                            <xsd:pageNumber>1</xsd:pageNumber>
+                                        </xsd:listServices>
+                                    </soapenv:Body>
+                                </soapenv:Envelope>
+                            </format>
+                            <args/>
+                        </payloadFactory>
+                        <header name="Action" scope="default" value="urn:listServices"/>
+                        <property name="messageType" scope="axis2" type="STRING" value="text/xml"/>
+                        <property expression="$ctx:ESBSessionID" name="Cookie" scope="transport" type="STRING"/>
+                        <property action="remove" name="Set-Cookie" scope="transport"/>
+                        <call>
+                            <endpoint>
+                                <address format="soap11" uri="https://localhost:9453/services/ServiceAdmin"/>
+                            </endpoint>
+                        </call>
+                        <datamapper config="gov:datamapper/ProxyDataMapperArr.dmc" description="ProxyDataMapperArr" inputSchema="gov:datamapper/ProxyDataMapperArr_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/ProxyDataMapperArr_outputSchema.json" outputType="XML"/>
+                        <!-- <datamapper config="gov:datamapper/ProxyDataMapper.dmc" description="ProxyDataMapper" inputSchema="gov:datamapper/ProxyDataMapper_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/ProxyDataMapper_outputSchema.json" outputType="JSON"/>
+                         -->
+                    </sequence>
+                </target>
+                <target>
+                    <sequence>
+                        <payloadFactory media-type="xml">
+                            <format>
+                                <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+                                    <soapenv:Header/>
+                                    <soapenv:Body>
+                                        <xsd:getAPIsForListing>
+                                            <xsd:pageNumber>0</xsd:pageNumber>
+                                            <xsd:itemsPerPage>100</xsd:itemsPerPage>
+                                        </xsd:getAPIsForListing>
+                                    </soapenv:Body>
+                                </soapenv:Envelope>
+                            </format>
+                            <args/>
+                        </payloadFactory>
+                        <header name="Action" scope="default" value="urn:getAPIsForListing"/>
+                        <property name="messageType" scope="axis2" type="STRING" value="text/xml"/>
+                        <property expression="$ctx:ESBSessionID" name="Cookie" scope="transport" type="STRING"/>
+                        <property action="remove" name="Set-Cookie" scope="transport"/>
+                        <call>
+                            <endpoint>
+                                <address format="soap11" uri="https://localhost:9453/services/RestApiAdmin"/>
+                            </endpoint>
+                        </call>
+                        <datamapper config="gov:datamapper/APIDataMapper.dmc" description="APIDataMapper" inputSchema="gov:datamapper/APIDataMapper_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/APIDataMapper_outputSchema.json" outputType="JSON"/>
+                        <log level="full"/>
+                    </sequence>
+                </target>
+            </clone>
+            <aggregate>
+                <completeCondition>
+                    <messageCount max="-1" min="-1"/>
+                </completeCondition>
+                <onComplete enclosingElementProperty="ROOT" expression="//endpoint/*">
+                    <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                    <respond/>
+                </onComplete>
+            </aggregate>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

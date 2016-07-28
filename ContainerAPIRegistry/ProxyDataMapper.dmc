@@ -1,0 +1,24 @@
+map_S_Envelope_S_root = function(){ 
+var outputroot={};
+
+var count_i_ax2504_wsdlURLs = 0;
+outputroot =  {};
+outputroot.endpoint =  {};
+outputroot.endpoint.proxies =  [];
+outputroot.endpoint.proxies[0] =  {};
+outputroot.endpoint.proxies[0].name = inputsoapenv_Envelope.soapenv_Body.ns_listServicesResponse.ns_return_xsi_type_ax2504_ServiceMetaDataWrapper.ax2504_services_xsi_type_ax2504_ServiceMetaData.ax2504_name;
+outputroot.endpoint.proxies[0].wsdl =  [];
+
+for(i_ax2504_wsdlURLs in inputsoapenv_Envelope.soapenv_Body.ns_listServicesResponse.ns_return_xsi_type_ax2504_ServiceMetaDataWrapper.ax2504_services_xsi_type_ax2504_ServiceMetaData.ax2504_wsdlURLs){
+outputroot.endpoint.proxies[0].wsdl[count_i_ax2504_wsdlURLs] = inputsoapenv_Envelope.soapenv_Body.ns_listServicesResponse.ns_return_xsi_type_ax2504_ServiceMetaDataWrapper.ax2504_services_xsi_type_ax2504_ServiceMetaData.ax2504_wsdlURLs[i_ax2504_wsdlURLs];
+
+count_i_ax2504_wsdlURLs++;
+}
+return outputroot;
+};
+
+
+
+
+
+

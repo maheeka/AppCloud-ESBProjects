@@ -1,0 +1,121 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "soapenv:Envelope",
+  "type" : "object",
+  "properties" : {
+    "soapenv:Body" : {
+      "id" : "http://wso2jsonschema.org/soapenv:Body",
+      "type" : "object",
+      "properties" : {
+        "ns:getAPIsForListingResponse" : {
+          "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse",
+          "type" : "object",
+          "properties" : {
+            "ns:return,xsi:type=ax2476:APIData" : {
+              "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData",
+              "type" : "array",
+              "items" : [ {
+                "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0",
+                "type" : "object",
+                "properties" : {
+                  "ax2476:artifactContainerName" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:artifactContainerName",
+                    "type" : "object",
+                    "nullable" : "true",
+                    "properties" : { },
+                    "attributes" : {
+                      "xsi:nil" : {
+                        "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil",
+                        "type" : "boolean"
+                      }
+                    }
+                  },
+                  "ax2476:context" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:context",
+                    "type" : "string"
+                  },
+                  "ax2476:fileName" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:fileName",
+                    "type" : "object",
+                    "nullable" : "true",
+                    "properties" : { },
+                    "attributes" : {
+                      "xsi:nil" : {
+                        "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil",
+                        "type" : "boolean"
+                      }
+                    }
+                  },
+                  "ax2476:host" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:host",
+                    "type" : "object",
+                    "nullable" : "true",
+                    "properties" : { },
+                    "attributes" : {
+                      "xsi:nil" : {
+                        "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil",
+                        "type" : "boolean"
+                      }
+                    }
+                  },
+                  "ax2476:isEdited" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:isEdited",
+                    "type" : "boolean"
+                  },
+                  "ax2476:name" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:name",
+                    "type" : "string"
+                  },
+                  "ax2476:port" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:port",
+                    "type" : "number"
+                  },
+                  "ax2476:resources" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:resources",
+                    "type" : "object",
+                    "nullable" : "true",
+                    "properties" : { },
+                    "attributes" : {
+                      "xsi:nil" : {
+                        "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:nil",
+                        "type" : "boolean"
+                      }
+                    }
+                  },
+                  "ax2476:statisticsEnable" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:statisticsEnable",
+                    "type" : "boolean"
+                  },
+                  "ax2476:tracingEnable" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/ax2476:tracingEnable",
+                    "type" : "boolean"
+                  }
+                },
+                "attributes" : {
+                  "xsi:type" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/ns:getAPIsForListingResponse/ns:return,xsi:type=ax2476:APIData/0/xsi:type",
+                    "type" : "string"
+                  }
+                }
+              } ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "namespaces" : [ {
+    "prefix" : "soapenv",
+    "url" : "http://schemas.xmlsoap.org/soap/envelope/"
+  }, {
+    "prefix" : "ns",
+    "url" : "http://org.apache.axis2/xsd"
+  }, {
+    "prefix" : "xsi",
+    "url" : "http://www.w3.org/2001/XMLSchema-instance"
+  }, {
+    "prefix" : "ax2476",
+    "url" : "http://api.rest.carbon.wso2.org/xsd"
+  } ]
+}
