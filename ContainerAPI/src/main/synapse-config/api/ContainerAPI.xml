@@ -55,9 +55,27 @@
                                 <address format="soap11" uri="https://localhost:9443/services/ServiceAdmin"/>
                             </endpoint>
                         </call>
-                        <datamapper config="gov:datamapper/ProxyDataMapperArr.dmc" description="ProxyDataMapperArr" inputSchema="gov:datamapper/ProxyDataMapperArr_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/ProxyDataMapperArr_outputSchema.json" outputType="JSON"/>
-                        <!-- <datamapper config="gov:datamapper/ProxyDataMapper.dmc" description="ProxyDataMapper" inputSchema="gov:datamapper/ProxyDataMapper_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/ProxyDataMapper_outputSchema.json" outputType="JSON"/>
+                        <!-- <filter regex="default_regex" source="boolean(//ax2509:services)" xmlns:ax2509="http://mgt.service.carbon.wso2.org/xsd"> -->
+                        <filter xmlns:ax2509="http://mgt.service.carbon.wso2.org/xsd" xpath="boolean(//ax2509:services/*)">
+                            <then>
+                                <datamapper config="gov:datamapper/ProxyDataMapperArr.dmc" description="ProxyDataMapperArr" inputSchema="gov:datamapper/ProxyDataMapperArr_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/ProxyDataMapperArr_outputSchema.json" outputType="JSON"/>
+                                <!-- <datamapper config="gov:datamapper/ProxyDataMapper.dmc" description="ProxyDataMapper" inputSchema="gov:datamapper/ProxyDataMapper_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/ProxyDataMapper_outputSchema.json" outputType="JSON"/>
                          -->
+                            </then>
+                            <else>
+                                <payloadFactory media-type="json">
+                                    <format>
+										{
+											"endpoint": {
+												"proxies" : {}
+											}
+										}
+                            </format>
+                                    <args/>
+                                </payloadFactory>
+                                <log/>
+                            </else>
+                        </filter>
                     </sequence>
                 </target>
                 <target>
