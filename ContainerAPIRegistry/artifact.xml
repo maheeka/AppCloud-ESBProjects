@@ -62,4 +62,25 @@
             <mediaType>text/plain</mediaType>
         </item>
     </artifact>
+    <artifact name="ProxyDataMapperArr2" groupId="com.example.ContainerAPIRegistry.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ProxyDataMapperArr2.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+    <artifact name="ProxyDataMapperArr2_inputSchema" groupId="com.example.ContainerAPIRegistry.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ProxyDataMapperArr2_inputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+    <artifact name="ProxyDataMapperArr2_outputSchema" groupId="com.example.ContainerAPIRegistry.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ProxyDataMapperArr2_outputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
 </artifacts>

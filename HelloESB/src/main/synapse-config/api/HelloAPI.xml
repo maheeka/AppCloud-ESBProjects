@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/hello" name="HelloAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/{name}">
+        <inSequence>
+            <property expression="$ctx:uri.var.name" name="name" scope="default" type="STRING"/>
+            <payloadFactory media-type="json">
+                <format>
+                    { "greeting" : "Hello $1 !"}
+                </format>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:name"/>
+                </args>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

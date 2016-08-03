@@ -24,13 +24,10 @@
             <property name="messageType" scope="axis2" type="STRING" value="text/xml"/>
             <call>
                 <endpoint>
-                    <address format="soap11" uri="https://localhost:9453/services/AuthenticationAdmin"/>
+                    <address format="soap11" uri="https://localhost:9443/services/AuthenticationAdmin"/>
                 </endpoint>
             </call>
             <property expression="fn:tokenize(syn:get-property('transport','Set-Cookie'),';')[1]" name="ESBSessionID" scope="default" type="STRING" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
-            <log>
-                <property expression="$ctx:ESBSessionID" name="ESBSessionID"/>
-            </log>
             <clone>
                 <target>
                     <sequence>
@@ -55,10 +52,10 @@
                         <property action="remove" name="Set-Cookie" scope="transport"/>
                         <call>
                             <endpoint>
-                                <address format="soap11" uri="https://localhost:9453/services/ServiceAdmin"/>
+                                <address format="soap11" uri="https://localhost:9443/services/ServiceAdmin"/>
                             </endpoint>
                         </call>
-                        <datamapper config="gov:datamapper/ProxyDataMapperArr.dmc" description="ProxyDataMapperArr" inputSchema="gov:datamapper/ProxyDataMapperArr_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/ProxyDataMapperArr_outputSchema.json" outputType="XML"/>
+                        <datamapper config="gov:datamapper/ProxyDataMapperArr.dmc" description="ProxyDataMapperArr" inputSchema="gov:datamapper/ProxyDataMapperArr_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/ProxyDataMapperArr_outputSchema.json" outputType="JSON"/>
                         <!-- <datamapper config="gov:datamapper/ProxyDataMapper.dmc" description="ProxyDataMapper" inputSchema="gov:datamapper/ProxyDataMapper_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/ProxyDataMapper_outputSchema.json" outputType="JSON"/>
                          -->
                     </sequence>
@@ -85,11 +82,10 @@
                         <property action="remove" name="Set-Cookie" scope="transport"/>
                         <call>
                             <endpoint>
-                                <address format="soap11" uri="https://localhost:9453/services/RestApiAdmin"/>
+                                <address format="soap11" uri="https://localhost:9443/services/RestApiAdmin"/>
                             </endpoint>
                         </call>
                         <datamapper config="gov:datamapper/APIDataMapper.dmc" description="APIDataMapper" inputSchema="gov:datamapper/APIDataMapper_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/APIDataMapper_outputSchema.json" outputType="JSON"/>
-                        <log level="full"/>
                     </sequence>
                 </target>
             </clone>
