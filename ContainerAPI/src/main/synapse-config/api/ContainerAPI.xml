@@ -5,26 +5,32 @@
             <property name="ROOT" scope="default">
                 <urls/>
             </property>
+            <script language="js"><![CDATA[mc.setProperty("TENANT_DOMAIN",java.lang.System.getenv("TENANT_DOMAIN"));]]></script>
+            <script language="js"><![CDATA[mc.setProperty("TENANT_PASSWORD",java.lang.System.getenv("TENANT_PASSWORD"));]]></script>
             <payloadFactory media-type="xml">
                 <format>
                     <soapenv:Envelope xmlns:aut="http://authentication.services.core.carbon.wso2.org" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
                         <soapenv:Header/>
                         <soapenv:Body>
                             <aut:login>
-                                <aut:username>admin</aut:username>
-                                <aut:password>admin</aut:password>
+                                <aut:username>$1</aut:username>
+                                <aut:password>$2</aut:password>
                                 <aut:remoteAddress>localhost</aut:remoteAddress>
                             </aut:login>
                         </soapenv:Body>
                     </soapenv:Envelope>
                 </format>
-                <args/>
+                <args>
+                    <arg evaluator="xml" expression="fn:concat('admin@',syn:get-property('default', 'TENANT_DOMAIN'))"/>
+                    <arg evaluator="xml" expression="$ctx:TENANT_PASSWORD"/>
+                </args>
             </payloadFactory>
             <header name="Action" scope="default" value="urn:login"/>
             <property name="messageType" scope="axis2" type="STRING" value="text/xml"/>
+            <header expression="fn:concat('https://localhost:9443/t/', syn:get-property('default','TENANT_DOMAIN'),'/services/AuthenticationAdmin')" name="To" scope="default"/>
             <call>
                 <endpoint>
-                    <address format="soap11" uri="https://localhost:9443/services/AuthenticationAdmin"/>
+                    <default format="soap11"/>
                 </endpoint>
             </call>
             <property expression="fn:tokenize(syn:get-property('transport','Set-Cookie'),';')[1]" name="ESBSessionID" scope="default" type="STRING" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
@@ -49,10 +55,11 @@
                         <header name="Action" scope="default" value="urn:listServices"/>
                         <property name="messageType" scope="axis2" type="STRING" value="text/xml"/>
                         <property expression="$ctx:ESBSessionID" name="Cookie" scope="transport" type="STRING"/>
+                        <header expression="fn:concat('https://localhost:9443/t/', syn:get-property('default','TENANT_DOMAIN'),'/services/ServiceAdmin')" name="To" scope="default"/>
                         <property action="remove" name="Set-Cookie" scope="transport"/>
                         <call>
                             <endpoint>
-                                <address format="soap11" uri="https://localhost:9443/services/ServiceAdmin"/>
+                                <default format="soap11"/>
                             </endpoint>
                         </call>
                         <!-- <filter regex="default_regex" source="boolean(//ax2509:services)" xmlns:ax2509="http://mgt.service.carbon.wso2.org/xsd"> -->
@@ -97,10 +104,11 @@
                         <header name="Action" scope="default" value="urn:getAPIsForListing"/>
                         <property name="messageType" scope="axis2" type="STRING" value="text/xml"/>
                         <property expression="$ctx:ESBSessionID" name="Cookie" scope="transport" type="STRING"/>
+                        <header expression="fn:concat('https://localhost:9443/t/', syn:get-property('default','TENANT_DOMAIN'),'/services/RestApiAdmin')" name="To" scope="default"/>
                         <property action="remove" name="Set-Cookie" scope="transport"/>
                         <call>
                             <endpoint>
-                                <address format="soap11" uri="https://localhost:9443/services/RestApiAdmin"/>
+                                <default format="soap11"/>
                             </endpoint>
                         </call>
                         <datamapper config="gov:datamapper/APIDataMapper.dmc" description="APIDataMapper" inputSchema="gov:datamapper/APIDataMapper_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/APIDataMapper_outputSchema.json" outputType="JSON"/>

@@ -1,4 +1,4 @@
-map_S_Envelope_S_root = function(){
+map_S_Envelope_S_root = function(){ 
 var outputroot={};
 
 var count_i_ax2504_services_xsi_type_ax2504_ServiceMetaData = 0;
@@ -8,13 +8,15 @@ outputroot.endpoint =  {};
 outputroot.endpoint.proxies =  [];
 
 for(i_ax2504_services_xsi_type_ax2504_ServiceMetaData in inputsoapenv_Envelope.soapenv_Body.ns_listServicesResponse.ns_return_xsi_type_ax2504_ServiceMetaDataWrapper.ax2504_services_xsi_type_ax2504_ServiceMetaData){
+var count_i_ax2504_wsdlURLs = 0;
 outputroot.endpoint.proxies[count_i_ax2504_services_xsi_type_ax2504_ServiceMetaData] =  {};
 outputroot.endpoint.proxies[count_i_ax2504_services_xsi_type_ax2504_ServiceMetaData].name = inputsoapenv_Envelope.soapenv_Body.ns_listServicesResponse.ns_return_xsi_type_ax2504_ServiceMetaDataWrapper.ax2504_services_xsi_type_ax2504_ServiceMetaData[i_ax2504_services_xsi_type_ax2504_ServiceMetaData].ax2504_name;
 outputroot.endpoint.proxies[count_i_ax2504_services_xsi_type_ax2504_ServiceMetaData].wsdl =  [];
 
 for(i_ax2504_wsdlURLs in inputsoapenv_Envelope.soapenv_Body.ns_listServicesResponse.ns_return_xsi_type_ax2504_ServiceMetaDataWrapper.ax2504_services_xsi_type_ax2504_ServiceMetaData[i_ax2504_services_xsi_type_ax2504_ServiceMetaData].ax2504_wsdlURLs){
-outputroot.endpoint.proxies[count_i_ax2504_services_xsi_type_ax2504_ServiceMetaData].wsdl = inputsoapenv_Envelope.soapenv_Body.ns_listServicesResponse.ns_return_xsi_type_ax2504_ServiceMetaDataWrapper.ax2504_services_xsi_type_ax2504_ServiceMetaData[i_ax2504_services_xsi_type_ax2504_ServiceMetaData].ax2504_wsdlURLs;
+outputroot.endpoint.proxies[count_i_ax2504_services_xsi_type_ax2504_ServiceMetaData].wsdl[count_i_ax2504_wsdlURLs] = inputsoapenv_Envelope.soapenv_Body.ns_listServicesResponse.ns_return_xsi_type_ax2504_ServiceMetaDataWrapper.ax2504_services_xsi_type_ax2504_ServiceMetaData[i_ax2504_services_xsi_type_ax2504_ServiceMetaData].ax2504_wsdlURLs[i_ax2504_wsdlURLs];
 
+count_i_ax2504_wsdlURLs++;
 count_i_ax2504_wsdlURLs_i_ax2504_services_xsi_type_ax2504_ServiceMetaData++;
 }
 
@@ -22,3 +24,9 @@ count_i_ax2504_services_xsi_type_ax2504_ServiceMetaData++;
 }
 return outputroot;
 };
+
+
+
+
+
+
